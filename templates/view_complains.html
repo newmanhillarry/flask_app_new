@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Admin - View Complains</title>
+</head>
+<body>
+    <nav>
+        <h1>ZOFA SOCCER</h1>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/results">Results</a>
+            <a href="/teams">Teams</a>
+            <a href="/stats">Stats</a>
+            <a href="/complains">Complains</a>
+            <a href="/view-complains">view Complains</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title">Received Feedback</h2>
+        <div class="complaints-list">
+            {% for entry in complaints %}
+                <div class="complaint-card">
+                    <p>{{ entry }}</p>
+                    <small>— Anonymous Supporter</small>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Complains - Zofa Soccer</title>
+</head>
+<body>
+    <nav>
+        <h1>ZOFA SOCCER</h1>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/results">Results</a>
+            <a href="/teams">Teams</a>
+            <a href="/stats">Stats</a>
+            <a href="/complains">Complains</a>
+            <a href="/view-complains">view Complains</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title">Supporter Feedback</h2>
+
+    <!-- Flash Message Logic -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <div class="complain-box">
+        <p>Have a concern? Let the committee know anonymously.</p>
+        <form action="/complains" method="POST">
+            <textarea name="message" placeholder="Write your complaint here..." required></textarea>
+            <button type="submit" class="btn-submit">Send Complaint</button>
+        </form>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Stats - Zofa Soccer</title>
+</head>
+<body>
+    <nav>
+        <h1>ZOFA SOCCER</h1>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/results">Results</a>
+            <a href="/teams">Teams</a>
+            <a href="/stats">Stats</a>
+            <a href="/complains">Complains</a>
+            <a href="/view-complains">view Complains</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title">Top Scorers</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player Name</th>
+                    <th>Team</th>
+                    <th>Goals Scored</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Edit these in GitHub to update stats -->
+                <tr>
+                    <td>1</td>
+                    <td>John "The Flash" Doe</td>
+                    <td>Zofa United</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Sipho Smith</td>
+                    <td>City Lions</td>
+                    <td>9</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
