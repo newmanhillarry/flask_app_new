@@ -301,3 +301,30 @@ textarea {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* Container to hold Z.O.F.A and the Image together */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between text and logo */
+}
+
+.logo-container h1 {
+    margin: 0;
+    font-size: 1.5rem; /* Adjust text size if needed */
+}
+
+/* Logo Styling */
+.nav-logo {
+    height: 40px; /* Adjust this to fit your bar height */
+    width: auto;  /* Maintains aspect ratio */
+    display: block;
+    object-fit: contain;
+}
+
+/* Responsive fix: Ensure nav doesn't break on small screens */
+nav {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+}
